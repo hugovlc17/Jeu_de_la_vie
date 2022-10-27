@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css"/>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.min.js" ></script>
+        <script type="text/javascript" src="script.js"></script>
+        <title>Jeu de la vie</title>
+        
+    </head>
+    <body>
+        <div class="param">
+            <button classe="btn" onclick="btnStart()" type="button"> START </button>
+            <button classe="btn" onclick="btnStop()" type="button"> STOP </button>
+            <button classe="btn" onclick="btnReset()" type="button"> RESET </button>
+
+            <span>|</span>
+            <label for="speed"> Vitesse :</label>
+            <button class="speed" classe="btn" onclick="btnRapide()" type="button"> RAPIDE </button>
+            <button class="speed" classe="btn" onclick="btnMoyenne()" type="button"> MOYENNE </button>
+            <button class="speed" classe="btn" onclick="btnLente()" type="button"> LENTE </button>
+            <span>|</span>
+            <button id="btn" onclick="mode(this.value)" type="button" value="Classique"> Mode Classique </button>
+            <button id="btn" onclick="mode(this.value);" type="button" value="Day & Night"> Mode Day & Night </button>
+            <input id="btn" type="submit" name="Submit" value="Quitter" onClick="window.close()" style="padding-top: 3px; padding-bottom: 3px; background: #e62143; color: #fff; cursor: pointer; border: 0;">
+            <p id="pText">Mode : Classique</p>
+                
+            <div id="conteur" style="display:flex"></di>
+                <p style="margin-right: 15px;">Cellules en vies : <span id="life"></span></p>
+                <p style="margin-right: 15px;">Cellules mortes :<span id="dead"></span></p>
+                <p>Nombres d'itérations :<span id="iteration"></span> </p>
+            </div>
+            <div id="infoTouches" style="color: grey; font-style: italic;">
+                <p>Touches clavier : <strong>S</strong> = Start | <strong>F</strong> = Stop | <strong>R</strong> = Reset | <strong>V</strong> = modier la vitesse</p>
+            </div>
+            
+        </div>
+
+        
+    </body>
+    
+</html>
